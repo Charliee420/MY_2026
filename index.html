@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" class="btn btn-icon" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="page-container simple-view">
+
+        <!-- Header -->
+        <header>
+            <div class="title-box">
+                <h1>MONTHLY HABIT & PRODUCTIVITY TRACKER</h1>
+            </div>
+            <div class="meta-info">
+                <div class="input-group">
+                    <span>Name: </span>
+                    <input type="text" id="inp-name" class="clean-input" placeholder="Your Name">
+                </div>
+                <!-- Automatic Date Info -->
+                <div class="date-display">
+                    <span id="display-month">Month: --</span>
+                    <span class="separator">|</span>
+                    <span id="display-today">Today: --</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Tracker Grid -->
+        <div class="tracker-grid">
+
+            <!-- Grid Header Row (Days) -->
+            <div class="grid-row header-row">
+                <div class="habit-col header-label">HABIT / GOAL</div>
+                <div class="days-container">
+                    <!-- JS will populate days 1-31 -->
+                </div>
+            </div>
+
+            <!-- Sections Container -->
+            <div id="sections-container">
+                <!-- Sections will be populated by JS for cleaner HTML -->
+            </div>
+
+        </div>
+
+        <!-- Footer / Review Section -->
+        <footer>
+            <div class="footer-box">
+                <div class="box-header">💡 MOTIVATION</div>
+                <div class="box-content">
+                    <textarea id="txt-motivation" class="clean-textarea"
+                        placeholder="Paste a sticker or write a quote"></textarea>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="box-header">🏆 BIGGEST WIN</div>
+                <div class="box-content">
+                    <textarea id="txt-win" class="clean-textarea" placeholder="What went well?"></textarea>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="box-header">📈 TO IMPROVE</div>
+                <div class="box-content">
+                    <textarea id="txt-improve" class="clean-textarea" placeholder="Focus for next month"></textarea>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Bottom Print Button -->
+    <div class="bottom-controls">
+        <button onclick="window.print()" class="btn btn-primary">
+            <i class="fas fa-print"></i> Save as PDF / Print
+        </button>
+    </div>
+
+    <!-- Strict Mode Warning Modal -->
+    <div id="warning-modal" class="modal hidden">
+        <div class="modal-content">
+            <img src="warning.jpg" alt="Stop!" class="modal-image">
+            <h2>Nice try diddy!</h2>
+            <p>You can't change your past and future.<br>But you can change your <b>TODAY</b>,<br>It will surely change
+                your <b>TOMORROW</b>.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+    <div>@charliee</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
