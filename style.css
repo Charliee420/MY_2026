@@ -63,6 +63,8 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    gap: 10px;
 }
 
 .btn-icon {
@@ -247,6 +249,28 @@ h1 {
     background-color: var(--bg-alt);
 }
 
+/* Chart Section */
+.chart-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--bg-container);
+    border: 1px solid var(--grid-line);
+    border-radius: 8px;
+}
+
+.chart-title {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
 /* Footer */
 footer {
     height: 25mm;
@@ -404,6 +428,107 @@ footer {
     margin-bottom: 20px;
     font-size: 1rem;
     line-height: 1.5;
+}
+
+/* Edit Modal Specific Styles */
+.edit-modal {
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.edit-section {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.edit-section h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    background: var(--bg-alt);
+    border-radius: 4px;
+    border: 1px solid var(--grid-line);
+}
+
+.task-item span {
+    flex-grow: 1;
+    color: var(--text-main);
+}
+
+.task-item .delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.task-item .delete-btn:hover {
+    background: #c0392b;
+}
+
+.add-task-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.add-task-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid var(--grid-line);
+    border-radius: 4px;
+    background: var(--bg-container);
+    color: var(--text-main);
+    font-family: inherit;
+}
+
+.add-task-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-task-btn:hover {
+    opacity: 0.9;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--grid-line);
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
 }
 
 @keyframes popIn {
